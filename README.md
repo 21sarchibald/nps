@@ -16,3 +16,7 @@ Use this as a starting point to complete the WDD 231 personal activity. We will 
 ## Other commands
 
 - `npm run build` to build final files when you are ready to turn in.
+
+## Permalink for netlify
+
+https://67bca237f4f47d1b2251f6ca--heroic-churros-c609ef.netlify.app/
