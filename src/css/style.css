@@ -215,6 +215,7 @@ svg {
   border: none;
   display: flex;
   align-items: center;
+  margin: 10px 10px 10px 0px;
 }
 
 #global-nav-toggle .icon {
