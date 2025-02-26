@@ -249,9 +249,11 @@ svg {
   padding: 10px;
 }
 
-#hero-text span {
+.hero-subtitle {
   font-size: .75em;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 #park-hero img {
