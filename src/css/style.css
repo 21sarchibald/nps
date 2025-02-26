@@ -101,6 +101,11 @@ body {
   margin: 0;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 a:link,
 a:visited {
   color: var(--bs-link-color);
@@ -169,5 +174,47 @@ a:hover {
 
 svg {
   background-color: var(--bs-black);
-  fill: white;
+  fill: var(--bs-white);
+}
+
+.global-header {
+  background-color: black;
+  color: var(--bs-white);
+  display: flex;
+  justify-content: space-between;
+}
+
+.global-header a {
+  text-decoration: none;
+  color: var(--bs-white);
+  font-weight: bold;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+#global-nav-toggle {
+  color: black;
+  background-color: var(--bs-white);
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+#global-nav-toggle .icon {
+  background-color: var(--bs-white);
+  fill: var(--bs-black);
+}
+
+#hero-text {
+  background-color: var(--bs-black);
+  opacity: 50%;
+  color: var(--bs-white);
+}
+
+#hero-text a {
+  color: var(--bs-white);
 }
