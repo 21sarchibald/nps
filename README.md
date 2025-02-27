@@ -20,3 +20,5 @@ Use this as a starting point to complete the WDD 231 personal activity. We will 
 ## Permalink for netlify
 
 https://67bca237f4f47d1b2251f6ca--heroic-churros-c609ef.netlify.app/
+
+https://heroic-churros-c609ef.netlify.app/

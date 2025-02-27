@@ -206,8 +206,8 @@ svg {
 }
 
 #global-nav-toggle {
-  color: black;
-  background-color: var(--bs-white);
+  color: var(--bs-white);
+  background-color: var(--bs-black);
   font-weight: bold;
   font-size: 1em;
   padding: 10px;
@@ -219,8 +219,6 @@ svg {
 }
 
 #global-nav-toggle .icon {
-  background-color: var(--bs-white);
-  fill: var(--bs-black);
   margin: 2px;
 }
 
