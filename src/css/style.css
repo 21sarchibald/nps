@@ -296,7 +296,16 @@ svg {
   margin: 10px;
 }
 
+.info {
+  width: 450px;
+  /* display: flex; */
+}
+
 .info h1 {
   font-family:var(--bs-font-serif);
   font-weight: 550;
+}
+
+.info a {
+  color: var(--bs-black);
 }
