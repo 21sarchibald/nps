@@ -297,8 +297,8 @@ svg {
 }
 
 .info {
-  width: 450px;
-  /* display: flex; */
+  width: 100%;
+  padding: 10px;
 }
 
 .info h1 {
@@ -308,4 +308,20 @@ svg {
 
 .info a {
   color: var(--bs-black);
+}
+
+#park-footer {
+  background-image: url("footer-background.png");
+
+}
+
+@media screen and (min-width: 550px) {
+  .info {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .info div {
+    padding: 10px;
+  }
 }

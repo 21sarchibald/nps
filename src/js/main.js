@@ -31,11 +31,11 @@ parkImage.src = parkData.images[0].url;
 parkImage.alt = parkData.images[0].altText;
 
 
-function setInfo(data) {
+function setIntro(data) {
     return `<h1 id="parkName">${data.fullName}</h1>
         <p id="parkDescription">${data.description}</p>`
 }
-document.querySelector(".info").innerHTML = setInfo(parkData);
+document.querySelector(".intro").innerHTML = setIntro(parkData);
 
 function mediaCardTemplate(info) {
     return `
