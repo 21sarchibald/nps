@@ -306,13 +306,28 @@ svg {
   font-weight: 550;
 }
 
+.info h2 {
+  font-size: 1em;
+}
+
 .info a {
   color: var(--bs-black);
 }
 
-#park-footer {
-  background-image: url("footer-background.png");
+.info p {
+  font-size: .8em;
+}
 
+#park-footer {
+  background-image: url("../images/footer-background.png");
+  background-size: cover;
+  padding: 20px;
+}
+
+#park-footer h3 {
+  font-family: var(--bs-font-serif);
+  text-transform: uppercase;
+  font-size: 1em;
 }
 
 @media screen and (min-width: 550px) {
@@ -323,5 +338,6 @@ svg {
   }
   .info div {
     padding: 10px;
+    flex: 1;
   }
 }
