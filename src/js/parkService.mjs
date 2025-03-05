@@ -185,6 +185,12 @@ const park = {
 };
 
 export async function getParkData() {
+  const parkData = await getJson("parks?parkCode=zion");
+  return parkData.data[0];
+
+}
+
+async function getJson(url) {
   const options = {
     method: "GET",
     headers: {
@@ -192,14 +198,14 @@ export async function getParkData() {
     }
   };
   let data = {};
-  const response = await fetch(baseUrl + "parks" + "?parkCode=glac", options);
+  const response = await fetch(baseUrl + url, options);
   if (response.ok) {
     data = await response.json();
   }
   else throw new Error("response not ok")
-  return data.data[0];
-
+  return data;
 }
+
 
 const parkInfoLinks = [
   {
@@ -224,10 +230,9 @@ const parkInfoLinks = [
 ];
 
 export function getParkInfoLinks() {
-  return parkInfoLinks.map((item) => {
-    item.image = 
-  })
-
-
+  return parkInfoLinks.map((item, index) => {
+    item.image = park.images[index + 1].url;
+    return item;
+  });
   // return parkInfoLinks;
 }

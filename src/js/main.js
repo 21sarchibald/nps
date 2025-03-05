@@ -2,7 +2,7 @@ import { getParkData } from "./parkService.mjs";
 
 import { parkInfoTemplate } from "../templates.mjs";
 
-const parkInfoLinks = getParkInfoLinks();
+var parkInfoLinks = await getParkInfoLinks();
 
 let parkTemplate = document.querySelector("#hero-text");
 
