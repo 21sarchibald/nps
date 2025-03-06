@@ -1,0 +1,67 @@
+/* Title and logo styling */
+
+.site-title {
+    display: flex;
+    align-items: center;
+  }
+  .site-title > span {
+    font-size: 1rem;
+    margin-left: 0.3em;
+  }
+  
+  .logo {
+    height: 0;
+    width: 0;
+    margin: 0.5em;
+    display: inline-block;
+    border-top: 34px solid var(--bs-light-green);
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+  }
+
+.global-header {
+    background-color: black;
+    color: var(--bs-white);
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .global-header a {
+    text-decoration: none;
+    color: var(--bs-white);
+    font-weight: bold;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+  
+  .global-header__right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-icon {
+    padding: 20px;
+  }
+  
+  #global-nav-toggle {
+    color: var(--bs-white);
+    background-color: var(--bs-black);
+    font-weight: bold;
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 0px 0px;
+    border-left: 1px solid grey;
+    height: 100%;
+    font-weight: normal;
+  }
+  
+  #global-nav-toggle .icon {
+    margin: 2px;
+  }
