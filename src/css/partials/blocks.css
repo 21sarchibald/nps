@@ -1,37 +1,20 @@
-#main {
-    margin: 10px;
+  /* Skip links styling */
+  .skip-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
   }
   
-  .info {
-    width: 100%;
-    padding: 10px;
+  .skip-links a {
+    font-size: 11px;
+    font-size: 0.6875rem;
+    position: absolute;
+    right: 20px;
+    top: -200px;
+    z-index: -1;
   }
   
-  .info h1 {
-    font-family:var(--bs-font-serif);
-    font-weight: 550;
-  }
-  
-  .info h2 {
-    font-size: 1em;
-  }
-  
-  .info a {
-    color: var(--bs-black);
-  }
-  
-  .info p {
-    font-size: .8em;
-  }
-  
-  @media screen and (min-width: 550px) {
-    .info {
-      display: flex;
-      margin: 0 auto;
-      justify-content: center;
-    }
-    .info div {
-      padding: 10px;
-      flex: 1;
-    }
+  .skip-links a:focus {
+    top: 2px;
+    z-index: 9999;
   }
