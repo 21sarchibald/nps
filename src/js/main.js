@@ -1,6 +1,6 @@
 import { getParkData } from "./parkService.mjs";
 
-import { parkInfoTemplate } from "../templates.mjs";
+import { parkInfoTemplate } from "./templates.mjs";
 
 let parkTemplate = document.querySelector("#hero-text");
 
@@ -13,11 +13,11 @@ function setIntro(data) {
 
 import { getParkInfoLinks } from "./parkService.mjs";
 
-import { mediaCardTemplate } from "../templates.mjs";
+import { mediaCardTemplate } from "./templates.mjs";
 
 const infoSection = document.querySelector(".info");
 
-import { setHeaderFooter } from "../setHeaderFooter.mjs";
+import { setHeaderFooter } from "./setHeaderFooter.mjs";
 
 
 async function init() {

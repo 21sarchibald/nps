@@ -1,4 +1,4 @@
-import { parkInfoTemplate } from "../templates.mjs";
+import { parkInfoTemplate } from "./templates.mjs";
 
 const baseUrl = "https://developer.nps.gov/api/v1/";
 const apiKey = import.meta.env.VITE_NPS_API_KEY;
