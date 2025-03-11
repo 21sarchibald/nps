@@ -6,7 +6,7 @@ let parkTemplate = document.querySelector("#hero-text");
 
 const parkImage = document.querySelector("#park-hero > img");
 
-function setIntro(data) {
+export function setIntro(data) {
     return `<h1 id="parkName">${data.fullName}</h1>
         <p id="parkDescription">${data.description}</p>`
 }
