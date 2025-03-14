@@ -16,6 +16,16 @@ export function mediaCardTemplate(info) {
     `;
 }
 
+export function alertsTemplate(alert) {
+    let iconId = alert.category.toLowerCase();
+    if (iconId == "park closure") {
+        iconId = "closure";
+    }
+    return `
+    <svg class="icon" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.symbol.svg#${iconId}"></use></svg>
+    `
+}
+
 function getMailingAddress(addresses) {
     const mailing = addresses.find((address) => address.type === "Mailing");
     return mailing;

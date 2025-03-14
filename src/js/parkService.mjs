@@ -236,3 +236,9 @@ export function getParkInfoLinks() {
   });
   // return parkInfoLinks;
 }
+
+export async function getAlerts() {
+  const parkData = await getJson("alerts?parkCode=zion");
+  console.log(parkData);
+  return parkData.data;
+}

@@ -2,8 +2,6 @@ import { getParkData } from "./parkService.mjs";
 
 import { parkInfoTemplate } from "./templates.mjs";
 
-let parkTemplate = document.querySelector("#hero-text");
-
 const parkImage = document.querySelector("#park-hero > img");
 
 export function setIntro(data) {
@@ -15,15 +13,19 @@ import { getParkInfoLinks } from "./parkService.mjs";
 
 import { mediaCardTemplate } from "./templates.mjs";
 
-const infoSection = document.querySelector(".info");
-
 import { setHeaderFooter } from "./setHeaderFooter.mjs";
 
 
 async function init() {
     const parkData = await getParkData();
 
-    var parkInfoLinks = await getParkInfoLinks();
+    const parkInfoLinks = await getParkInfoLinks();
+
+    const infoSection = document.querySelector(".info");
+
+    // const html = parkInfoLinks.map(mediaCardTemplate);
+
+    // infoSection.insertAdjacentElement("afterbegin", html.join(""));
 
     parkInfoLinks.map(section => infoSection.innerHTML += mediaCardTemplate(section));
     
@@ -31,8 +33,8 @@ async function init() {
 
     parkImage.src = parkData.images[0].url;
     parkImage.alt = parkData.images[0].altText;
+    const parkTemplate = document.querySelector("#hero-text");
     parkTemplate.innerHTML = parkInfoTemplate(parkData);
-    document.querySelector(".intro").innerHTML = setIntro(parkData);
     
 }
 
