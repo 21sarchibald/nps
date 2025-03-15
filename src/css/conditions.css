@@ -4,12 +4,9 @@
 
 .alert {
     display: flex;
-}
-
-.alert > .icon {
-    /* width: 30px;
-    padding: 0px;
-    margin: 5px 20px 0px 0px; */
+    border-bottom: solid grey;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .alert svg {
@@ -20,5 +17,9 @@
 }
 
 .alert h3 {
-    margin: 0;
+    margin: 0px auto 0px 30px;
+}
+
+.alert p {
+    margin: 0px auto 0px 30px;
 }
