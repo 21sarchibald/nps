@@ -31,11 +31,16 @@
     color: var(--bs-white);
     font-weight: bold;
   }
+
+  .global-header svg {
+    background-color: var(--bs-black);
+    fill: var(--bs-white);
+    display: block;
+  }
   
   .icon {
     width: 20px;
     height: 20px;
-    display: block;
   }
   
   .global-header__right {
@@ -63,5 +68,6 @@
   }
   
   #global-nav-toggle .icon {
+    color: white;
     margin: 2px;
   }

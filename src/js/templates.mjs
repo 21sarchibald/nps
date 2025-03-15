@@ -22,10 +22,10 @@ export function alertsTemplate(alert) {
         iconId = "closure";
     }
     return `
-    <li class="alert-list-item">
-        <svg class="icon" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.symbol.svg#${iconId}"></use></svg>
+    <li class="alert">
+        <svg class="icon" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.symbol.svg#alert-${iconId}"></use></svg>
         <div>
-            <h3>${alert.title}</h3>
+            <h3 class="alert-${iconId}">${alert.title}</h3>
             <p>${alert.description}</p>
         </div>
     </li>

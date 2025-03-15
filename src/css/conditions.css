@@ -1,0 +1,24 @@
+#alerts ul {
+    list-style: none;
+}
+
+.alert {
+    display: flex;
+}
+
+.alert > .icon {
+    /* width: 30px;
+    padding: 0px;
+    margin: 5px 20px 0px 0px; */
+}
+
+.alert svg {
+    height: 30px;
+    width: 30px;
+    margin: .25em;
+    flex: 0 0 auto;
+}
+
+.alert h3 {
+    margin: 0;
+}
