@@ -237,8 +237,14 @@ export function getParkInfoLinks() {
   // return parkInfoLinks;
 }
 
-export async function getAlerts() {
-  const parkData = await getJson("alerts?parkCode=zion");
+export async function getAlerts(parkCode) {
+  const parkData = await getJson(`alerts?parkCode=${parkCode}`);
+  // console.log(parkData);
+  return parkData.data;
+}
+
+export async function getVisitorCenterData(parkCode) {
+  const parkData = await getJson(`visitorcenters?parkCode=${parkCode}`);
   console.log(parkData);
   return parkData.data;
 }

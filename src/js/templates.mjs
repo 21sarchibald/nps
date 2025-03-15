@@ -32,6 +32,16 @@ export function alertsTemplate(alert) {
     `
 }
 
+export function visitorCenterTemplate(center) {
+    return `
+    <li class="visitor-center">
+        <div>
+            <h3>${center.name}</h3>
+            <p>${center.description}</p>
+            <p>${center.directionsInfo}</p>
+    `
+}
+
 function getMailingAddress(addresses) {
     const mailing = addresses.find((address) => address.type === "Mailing");
     return mailing;
