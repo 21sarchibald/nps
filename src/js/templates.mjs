@@ -42,6 +42,13 @@ export function visitorCenterTemplate(center) {
     `
 }
 
+export function activityTemplate(activity) {
+    return `
+    <li class="activity">
+        <p>${activity.name}</p>
+    `
+}
+
 function getMailingAddress(addresses) {
     const mailing = addresses.find((address) => address.type === "Mailing");
     return mailing;

@@ -1,6 +1,6 @@
 import { setHeaderFooter } from "./setHeaderFooter.mjs";
 import { getParkData, getAlerts, getVisitorCenterData } from "./parkService.mjs";
-import { parkInfoTemplate, alertsTemplate, visitorCenterTemplate } from "./templates.mjs";
+import { parkInfoTemplate, alertsTemplate, visitorCenterTemplate, activityTemplate } from "./templates.mjs";
 // import { setIntro } from "./main";
 
 // let parkTemplate = document.querySelector("#hero-text");
@@ -21,6 +21,11 @@ function setVisitorCenterInfo(visitorCenterInfo) {
     visitorCenterInfo.map(center => visitorCenterSection.innerHTML += visitorCenterTemplate(center));
 }
 
+function setActivities(activities) {
+    const activitiesSection = document.querySelector("#activities details > ul");
+    activities.map(activity => activitiesSection.innerHTML += activityTemplate(activity));
+}
+
 async function init() {
     const parkData = await getParkData();
     setHeaderFooter(parkData);
@@ -36,6 +41,8 @@ async function init() {
 
     const visitorCenterInfo = await getVisitorCenterData(parkCode);
     setVisitorCenterInfo(visitorCenterInfo);
+
+    setActivities(parkData.activities);
 }
 
 document.addEventListener("DOMContentLoaded", init());

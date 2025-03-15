@@ -38,3 +38,16 @@
 .visitor-center {
     border-bottom: solid grey;
 }
+
+#activities details {
+    border: solid grey;
+    padding: 20px;
+}
+
+#activities details > summary {
+    margin-bottom: 30px;
+}
+
+.activity {
+    line-height: .6rem;
+}
