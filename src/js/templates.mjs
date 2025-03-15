@@ -1,3 +1,5 @@
+import spritePath from "../images/sprite.symbol.svg";
+
 export function parkInfoTemplate(info) {
     return `<h1><a href="/" class="hero-title">${info.name}</a></h1>
     <p class="hero-subtitle">
@@ -23,7 +25,7 @@ export function alertsTemplate(alert) {
     }
     return `
     <li class="alert">
-        <svg class="icon" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.symbol.svg#alert-${iconId}"></use></svg>
+        <svg class="icon" focusable="false" aria-hidden="true"><use xlink:href="${spritePath}#alert-${iconId}"></use></svg>
         <div>
             <h3 class="alert-${iconId}">${alert.title}</h3>
             <p>${alert.description}</p>
