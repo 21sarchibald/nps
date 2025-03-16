@@ -3,6 +3,11 @@
 * {
     box-sizing: border-box;
   }
+
+  #main {
+    margin: 10px;
+  }
+  
   img {
     max-width: 100%;
   }
