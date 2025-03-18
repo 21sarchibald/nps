@@ -22,7 +22,8 @@
 .global-header {
     background-color: black;
     color: var(--bs-white);
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 200px;
     justify-content: space-between;
   }
   
@@ -35,7 +36,7 @@
   .global-header svg {
     background-color: var(--bs-black);
     fill: var(--bs-white);
-    display: block;
+    /* display: block; */
   }
   
   .icon {
@@ -46,8 +47,13 @@
   .global-header__right {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
   }
   
+  .global-header__right button {
+    align-items: center;
+  }
+
   .search-icon {
     padding: 20px;
   }
@@ -70,6 +76,22 @@
   #global-nav-toggle .icon {
     color: white;
     margin: 2px;
+  }
+
+  .global-nav {
+    max-height: 0;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .global-nav-toggle-closed {
+    display: flex;
+    align-items: center;
+  }
+
+  .global-nav-menu-open {
+    max-height: 0;
+    display: none;
   }
 
   #park-hero {
