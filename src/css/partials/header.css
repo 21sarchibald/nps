@@ -92,6 +92,7 @@
   .global-nav-menu-open {
     max-height: 0;
     display: none;
+    align-items: center;
   }
 
   #park-hero {
