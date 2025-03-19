@@ -97,6 +97,19 @@
     align-items: center;
   }
 
+  .global-nav.show {
+    max-height: 50px;
+    display: flex;
+  }
+
+  .global-nav__toggle[aria-expanded="true"] > .global-nav-menu-open {
+    display: flex;
+  }
+
+  .global-nav__toggle[aria-expanded="true"] > .global-nav-menu-closed {
+    display: none;
+  }
+
   #park-hero {
     display: grid;
     grid-template-rows: repeat(4, 25%);

@@ -41,4 +41,31 @@ async function init() {
     
 }
 
+function enableNavigation() {
+
+    const menuButton = document.querySelector("#global-nav-toggle");
+    const globalNav = document.querySelector(".global-nav");
+
+    menuButton.addEventListener("click", (ev) => {
+        let target = ev.target;
+        globalNav.classList.toggle("show");
+
+        if (!target.matches("button")) {
+            target = target.closest("button");
+        }
+
+        if (globalNav.classList.contains("show")) {
+            target.setAttribute("aria-expanded", "true");
+        }
+
+        else {
+            target.setAttribute("aria-expanded", "false");
+        }
+
+    });
+
+}
+
+
 init();
+enableNavigation();
