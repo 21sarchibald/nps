@@ -51,7 +51,9 @@
   }
   
   .global-header__right button {
+    display: flex;
     align-items: center;
+    cursor: pointer;
   }
 
   .search-icon {
@@ -84,7 +86,7 @@
     overflow: hidden;
   }
 
-  .global-nav-toggle-closed {
+  .global-nav-menu-closed {
     display: flex;
     align-items: center;
   }
