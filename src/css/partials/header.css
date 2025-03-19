@@ -84,6 +84,7 @@
     max-height: 0;
     display: flex;
     overflow: hidden;
+    transition: all 1s
   }
 
   .global-nav-menu-closed {
@@ -98,7 +99,7 @@
   }
 
   .global-nav.show {
-    max-height: 50px;
+    max-height: 150px;
     display: flex;
   }
 
