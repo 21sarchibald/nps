@@ -9,7 +9,7 @@ const parkImage = document.querySelector("#park-hero > img");
 
 export function setIntro(data) {
     return `<h1 id="parkName">${data.fullName}</h1>
-        <p id="parkDescription">${data.description}</p>`
+        <p id="parkDescription">${data.description}</p>`;
 }
 
 import { getParkInfoLinks } from "./parkService.mjs";
