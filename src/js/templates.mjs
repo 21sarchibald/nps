@@ -31,7 +31,7 @@ export function alertsTemplate(alert) {
             <p>${alert.description}</p>
         </div>
     </li>
-    `
+    `;
 }
 
 export function visitorCenterTemplate(center) {
@@ -41,14 +41,14 @@ export function visitorCenterTemplate(center) {
             <h3>${center.name}</h3>
             <p>${center.description}</p>
             <p>${center.directionsInfo}</p>
-    `
+    `;
 }
 
 export function activityTemplate(activity) {
     return `
     <li class="activity">
         <p>${activity.name}</p>
-    `
+    `;
 }
 
 function getMailingAddress(addresses) {

@@ -1,4 +1,4 @@
-import { parkInfoTemplate } from "./templates.mjs";
+// import { parkInfoTemplate } from "./templates.mjs";
 
 const baseUrl = "https://developer.nps.gov/api/v1/";
 const apiKey = import.meta.env.VITE_NPS_API_KEY;
@@ -202,7 +202,7 @@ async function getJson(url) {
   if (response.ok) {
     data = await response.json();
   }
-  else throw new Error("response not ok")
+  else throw new Error("response not ok");
   return data;
 }
 
