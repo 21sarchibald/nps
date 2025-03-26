@@ -70,7 +70,7 @@
     display: flex;
     align-items: center;
     margin: 0px 0px 0px 0px;
-    border-left: 1px solid grey;
+    border-left: 1px solid var(--bs-gray-700);
     height: 100%;
     font-weight: normal;
   }
@@ -138,7 +138,7 @@
   .global-nav__split-button button {
     background-color: transparent;
     border: none;
-    border-left: solid var(--bs-gray-600);
+    border-left: solid var(--bs-gray-700);
     height: 100%;
     width: 70px;
     transition: 1s;
@@ -278,4 +278,35 @@
 
   .rotate {
     transform: rotate(180deg);
+  }
+
+  @media screen and (min-width: 800px) {
+    .global-nav__section-heading,
+    .global-nav__list:first-of-type  {
+      display: none;
+    }
+
+    .global-nav {
+      border-top: solid var(--bs-gray-700);
+    }
+    .global-nav-sublist {
+      max-height: fit-content;
+      margin-left: 0;
+      padding-left: 10px;
+    }
+
+    .global-nav__list {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .global-nav__split-button {
+      width: auto;
+      background-color: black;
+      border: none;
+    }
+
+    .global-nav__split-button button {
+      display: none;
+    }
   }
