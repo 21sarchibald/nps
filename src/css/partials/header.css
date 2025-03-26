@@ -144,6 +144,11 @@
     width: 70px;
   }
 
+  .global-nav__split-button button:hover {
+    background-color: var(--bs-gray-900);
+    cursor: pointer;
+  }
+
   .global-nav__split-button button .icon {
     background-color: transparent;
     fill: white;
