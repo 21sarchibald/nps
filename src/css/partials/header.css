@@ -300,6 +300,11 @@
       border: none;
     }
 
+    .global-nav__split-button a:hover{
+      background-color: black;
+      text-decoration: underline;
+    }
+
     .global-nav__split-button button {
       display: none;
     }
