@@ -99,7 +99,7 @@
   }
 
   .global-nav__section-heading:nth-of-type(1) {
-    color: lightgreen;
+    color: var(--bs-light-green);
     font-size: 1em;
     padding: 20px 20px 0px 10px;
     margin: 0;
@@ -114,9 +114,6 @@
   }
 
   .global-nav__list {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
     list-style: none;
     padding-left: 0;
     /* max-height: 0; */
@@ -125,24 +122,32 @@
   .global-nav__split-button {
     color: white;
     background-color: var(--bs-gray-800);
-    padding: 10px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: .8em;
     margin: 0;
     border-top: solid var(--bs-gray-700);
+    padding-left: 10px;
   }
+
+  /* .global-nav__split-button a {
+    padding: 10px;
+  } */
 
   .global-nav__split-button button {
     background-color: transparent;
     border: none;
-    border-left: white;
+    border-left: solid var(--bs-gray-600);
+    height: 100%;
+    width: 70px;
   }
 
   .global-nav__split-button button .icon {
     background-color: transparent;
     fill: white;
+    --icon-color: white;
   }
 
   .global-nav-sublist {
