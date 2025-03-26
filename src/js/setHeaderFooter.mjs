@@ -1,5 +1,7 @@
 import { footerTemplate } from "./templates.mjs";
 
+import { enableNavigation } from "./navigation.mjs";
+
 function setHeaderInfo(data) {
 
     const title = document.querySelector("head > title");
@@ -19,4 +21,5 @@ function setFooter(data) {
 export function setHeaderFooter(data) {
     setHeaderInfo(data);
     setFooter(data);
+    enableNavigation();
 }
