@@ -1,0 +1,60 @@
+.vc-name {
+    font-weight: normal;
+    font-size: 1.5em;
+    border-bottom: solid var(--bs-gray-600);
+}
+
+.vc-info {
+    margin: 0 auto;
+}
+
+.vc-info figure {
+    text-align: center;
+    margin: 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    unicode-bidi: isolate;
+}
+.vc-info img {
+    width: 90%;
+}
+
+figcaption {
+    text-align: left;
+    margin-left: 5%;
+    font-size: .8em;
+}
+
+.vc-info span {
+    font-style: italic;
+}
+
+/* summary {
+    display: flex;
+    justify-content: space-between;
+} */
+
+summary::marker {
+    
+}
+
+.vc-details-list {
+    border: solid lightgray;
+    border-radius: 10px;
+}
+
+details {
+    border-bottom: solid lightgray;
+    padding: 10px;
+}
+
+details svg {
+
+}
+
+#vcContact {
+    border-bottom: none;
+}

@@ -5,6 +5,7 @@ import { enableNavigation } from "./navigation.mjs";
 function setHeaderInfo(data) {
 
     const title = document.querySelector("head > title");
+    console.log(data);
     title.innerHTML = data.fullName;
     
     const disclaimer = document.querySelector(".disclaimer > a");

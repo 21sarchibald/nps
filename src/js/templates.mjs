@@ -38,7 +38,7 @@ export function visitorCenterTemplate(center) {
     return `
     <li class="visitor-center">
         <div>
-            <h3>${center.name}</h3>
+            <h3><a href="visitor-center.html?id=${center.id}">${center.name}</a></h3>
             <p>${center.description}</p>
             <p>${center.directionsInfo}</p>
     `;
