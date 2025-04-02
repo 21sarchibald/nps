@@ -1,7 +1,8 @@
 .vc-name {
     font-weight: normal;
     font-size: 1.5em;
-    border-bottom: solid var(--bs-gray-600);
+    border-bottom: solid var(--bs-grey-3);
+    padding-bottom: 20px;
 }
 
 .vc-info {
@@ -32,29 +33,8 @@ figcaption {
     font-style: italic;
 }
 
-/* summary {
-    display: flex;
-    justify-content: space-between;
-} */
-
-summary::marker {
-    
-}
-
-.vc-details-list {
-    border: solid lightgray;
-    border-radius: 10px;
-}
-
 details {
-    border-bottom: solid lightgray;
+    border: solid var(--bs-grey-3);
     padding: 10px;
-}
-
-details svg {
-
-}
-
-#vcContact {
-    border-bottom: none;
+    border-radius: 5px;
 }

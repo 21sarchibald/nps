@@ -75,3 +75,16 @@ export function footerTemplate(data) {
     <p>${voice}</p>
     </section>`;
   }
+
+export function listTemplate(data, contentTemplate) {
+    const html = data.map(contentTemplate);
+    return `<ul>${html.join("")}</ul>`;
+}
+
+export function vcImageTemplate(data) {
+    return `<li><img src=${data.url}" alt="${data.altText}"></li>`;
+}
+
+export function vcAmenityTemplate(data) {
+    return `<li>${data}</li>`;
+}

@@ -5,13 +5,23 @@ import { setHeaderFooter } from "./setHeaderFooter.mjs";
 
 import { getParkData, getParkVisitorCenterDetails } from "./parkService.mjs";
 
-import { parkInfoTemplate } from "./templates.mjs";
+import { parkInfoTemplate, listTemplate, vcImageTemplate, vcAmenityTemplate } from "./templates.mjs";
 
 function getParam(param) {
 
     const params = new URLSearchParams(window.location.search);
     return params.get(param);
 
+}
+
+async function setInformation(data) {
+    
+    const amenitiesHTML = listTemplate(data.amenities, vcAmenityTemplate);
+    document.querySelector("#vcAmenities").insertAdjacentHTML("beforeend", amenitiesHTML);
+
+
+//     const galleryHTML = listTemplate(data.images, vcImageTemplate);
+//     document.querySelector("vc-gallery").insertAdjacentElement("beforeend", galleryHTML);
 }
 
 async function init() {
@@ -30,8 +40,8 @@ async function init() {
 
     const parkId = getParam("id");
 
-    const visitorCenterDetails = getParkVisitorCenterDetails(parkId);
-
+    const visitorCenterDetails = await getParkVisitorCenterDetails(parkId);
+    setInformation(visitorCenterDetails);
 }
 
 init();
