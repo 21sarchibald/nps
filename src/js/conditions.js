@@ -19,8 +19,8 @@ function setAlerts(alerts) {
 
 function setVisitorCenterInfo(visitorCenterInfo) {
     const visitorCenterSection = document.querySelector("#visitorServices details > ul");
-    // const html = visitorCenterInfo.map(visitorCenterTemplate);
-    // visitorCenterSection.insertAdjacentElement("afterbegin", html.join(""));
+    const html = visitorCenterInfo.map(visitorCenterTemplate);
+    visitorCenterSection.insertAdjacentHTML("afterbegin", html.join(""));
     visitorCenterInfo.map(center => visitorCenterSection.innerHTML += visitorCenterTemplate(center));
 }
 

@@ -5,7 +5,7 @@ import { setHeaderFooter } from "./setHeaderFooter.mjs";
 
 import { getParkData, getParkVisitorCenterDetails } from "./parkService.mjs";
 
-import { parkInfoTemplate, listTemplate, vcImageTemplate, vcAmenityTemplate } from "./templates.mjs";
+import { parkInfoTemplate, listTemplate, vcImageTemplate, vcAmenityTemplate, vcInfoTemplate } from "./templates.mjs";
 
 function getParam(param) {
 
@@ -15,7 +15,10 @@ function getParam(param) {
 }
 
 async function setInformation(data) {
-    
+
+    document.querySelector(".vc-name").insertAdjacentHTML("beforeend", data.name);
+    document.querySelector(".vc-info").insertAdjacentHTML("beforeend", vcInfoTemplate(data));
+
     const amenitiesHTML = listTemplate(data.amenities, vcAmenityTemplate);
     document.querySelector("#vcAmenities").insertAdjacentHTML("beforeend", amenitiesHTML);
 

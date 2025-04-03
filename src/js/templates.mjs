@@ -41,7 +41,7 @@ export function visitorCenterTemplate(center) {
             <h3><a href="visitor-center.html?id=${center.id}">${center.name}</a></h3>
             <p>${center.description}</p>
             <p>${center.directionsInfo}</p>
-    `;
+    </li>`;
 }
 
 export function activityTemplate(activity) {
@@ -75,6 +75,36 @@ export function footerTemplate(data) {
     <p>${voice}</p>
     </section>`;
   }
+
+export function vcInfoTemplate(data) {
+    const image = data.images[0];
+    return `
+    <figure>
+        <img src="${image.url}" alt="${image.altText}" />
+        <figcaption>
+        ${image.caption} <span>${image.credit}</span>
+        </figcaption>
+    </figure>
+    <p>${data.description}</p> 
+    `;
+}
+
+export function addressTemplate(data) {
+    return `<section class="vc-addresses__physical">
+        <h3>Physical Address</h3>
+        <address>
+            [Address part 1]<br />
+            [park name], [state] [zip]
+        </address>
+        </section>
+        <section class="vc-addresses__mailing">
+        <h3>Mailing Address</h3>
+        <address>
+            [Address part 1]<br />
+            [park name], [state] [zip]
+        </address>
+    </section>`;
+}
 
 export function listTemplate(data, contentTemplate) {
     const html = data.map(contentTemplate);
