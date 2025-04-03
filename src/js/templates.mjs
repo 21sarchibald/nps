@@ -89,21 +89,39 @@ export function vcInfoTemplate(data) {
     `;
 }
 
-export function addressTemplate(data) {
+function vcAddressTemplate(address) {
     return `<section class="vc-addresses__physical">
-        <h3>Physical Address</h3>
+        <h3>${address.type} Address</h3>
         <address>
-            [Address part 1]<br />
-            [park name], [state] [zip]
+            ${address.line1}<br />
+            ${address.city}, ${address.stateCode} ${address.postalCode}
         </address>
+        </section>`;
+}
+
+export function vcAddressesTemplate(addresses) {
+    const physicalAddress = addresses.find(address => address.type === "Physical");
+    const mailingAddress = addresses.find(address => address.type === "Mailing");
+
+    const addressHTML = vcAddressTemplate(physicalAddress) + vcAddressTemplate(mailingAddress);
+    return addressHTML;
+}
+
+export function vcAmenityTemplate(data) {
+    return `<li>${data}</li>`;
+}
+
+export function vcContactInfoTemplate(data) {
+    return `
+    <section class="vc-contact__email">
+        <h3>Email Address</h3>
+        <a href="email:${data.emailAddresses[0].emailAddress}">Send this visitor center an email</a>
         </section>
-        <section class="vc-addresses__mailing">
-        <h3>Mailing Address</h3>
-        <address>
-            [Address part 1]<br />
-            [park name], [state] [zip]
-        </address>
-    </section>`;
+        <section class="vc-contact__phone">
+        <h3>Phone numbers</h3>
+        <a href="tel:+1${data.phoneNumbers[0].phoneNumber}">${data.phoneNumbers[0].phoneNumber}</a>
+    </section>
+    `;
 }
 
 export function listTemplate(data, contentTemplate) {
@@ -112,9 +130,5 @@ export function listTemplate(data, contentTemplate) {
 }
 
 export function vcImageTemplate(data) {
-    return `<li><img src=${data.url}" alt="${data.altText}"></li>`;
-}
-
-export function vcAmenityTemplate(data) {
-    return `<li>${data}</li>`;
+    return `<li><img src=${data.url} alt="${data.altText}"></li>`;
 }
