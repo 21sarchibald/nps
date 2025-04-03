@@ -36,6 +36,25 @@
     font-style: italic;
 }
 
+.vc-gallery img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.vc-gallery li {
+    list-style: none;
+}
+
+.vc-gallery ul {
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
 details {
     border: solid var(--bs-grey-3);
     padding: 10px;
