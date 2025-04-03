@@ -19,7 +19,7 @@ async function setInformation(data) {
     document.querySelector(".vc-name").insertAdjacentHTML("beforeend", data.name);
     document.querySelector(".vc-info").insertAdjacentHTML("beforeend", vcInfoTemplate(data));
     document.querySelector("#vcAddresses").insertAdjacentHTML("beforeend", vcAddressesTemplate(data.addresses));
-    document.querySelector("#vcDirections").insertAdjacentHTML("beforeend", data.directionsInfo);
+    document.querySelector("#vcDirections").insertAdjacentHTML("beforeend", `<p>${data.directionsInfo}</p>`);
     document.querySelector("#vcContact").insertAdjacentHTML("beforeend", vcContactInfoTemplate(data.contacts));
     document.querySelector(".vc-gallery").insertAdjacentHTML("beforeend", listTemplate(data.images, vcImageTemplate));
 
